@@ -1,0 +1,10 @@
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+$main-pink-color: #ee26c2;
+$elem-shadow-strong: 0px 0px 10px rgba(0, 0, 0, 0.3);
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$container-elem-padding: 1rem;

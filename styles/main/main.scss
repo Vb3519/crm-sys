@@ -1,0 +1,28 @@
+@use './mediaplans.scss';
+@use './reports.scss';
+@use './chat.scss';
+
+@use '../mixinsAndVariables.scss' as *;
+
+/* МЕЙН: */
+/* ---------------------------- */
+
+/* вкладка "файлы", куда подгружаются списки отчетов и медиапланов: */
+.all-files {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+
+  &__title {
+    padding-inline: 1rem;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  &__plans-and-reports-wrapper {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1rem;
+  }
+}

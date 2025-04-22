@@ -1,0 +1,173 @@
+@use '../mixinsAndVariables.scss' as *;
+
+/* МЕДИАПЛАНЫ: */
+/* ---------------------------- */
+.all-files__media-plans,
+.all-files__reports {
+  @include flex-column;
+  gap: 1rem;
+  padding-inline: 1rem;
+}
+
+/* элементы-контейнеры для информации по медиапланам и отчетам: */
+.media-plans-box,
+.reports-box {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__text {
+      font-size: 18px;
+      font-weight: 600;
+      padding: 0.5rem 0.2rem;
+    }
+  }
+
+  &__title:hover {
+    cursor: pointer;
+    background-color: #ebebeb;
+    border-radius: 0.3rem;
+    transition: background-color 200ms ease-in;
+  }
+
+  &__title > i {
+    padding: 0.5rem 0.7rem;
+  }
+}
+
+/* список медиапланов / отчетов */
+.media-plans-list,
+.reports-list {
+  @include flex-column;
+  gap: 0.5rem;
+
+  &__elem {
+    @include flex-column;
+    gap: 0.5rem;
+  }
+}
+
+/* элемент списка: */
+.media-plans-list__elem,
+.reports-list__elem {
+  &__company {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.2rem;
+    background-color: #f5f5f5;
+    border-radius: 0.5rem;
+  }
+
+  &__company > i {
+    padding: 0.5rem;
+  }
+
+  &__rdy,
+  &__dev {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+.media-plans-list__elem__rdy > i,
+.reports-list__elem__dev > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #19aa31;
+  color: white;
+  font-size: 10px;
+}
+
+.reports-list__elem__dev.report-dev-process > i {
+  background-color: #949494;
+}
+
+/* компания: */
+.media-plans-company,
+.reports-company {
+  &__name {
+    font-size: 15px;
+  }
+
+  &__download {
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.3rem;
+    background-color: #f4d4ed;
+  }
+
+  &__download:hover {
+    cursor: pointer;
+  }
+}
+
+.reports-company__download.download-process {
+  background-color: #949494;
+  color: white;
+}
+
+.media-plan-elem-rdy__text,
+.reports-elem-dev__text {
+  font-size: 12px;
+  color: #525252;
+}
+
+.media-plans-box__show-more-btn,
+.reports-box__show-more-btn {
+  margin-left: auto;
+  border: none;
+  color: $main-pink-color;
+  font-size: 15px;
+  background-color: white;
+}
+
+.media-plans-box__show-more-btn,
+.reports-box__show-more-btn:hover {
+  cursor: pointer;
+}
+
+/* заглушка для медиапланов или отчетов (когда что-то одно из загружено): */
+.reports-list-empty,
+.media-plans-list-empty {
+  @include flex-column;
+  align-items: center;
+  gap: 1rem;
+
+  & > i {
+    font-size: 6rem;
+    color: #e2e2e2;
+  }
+}
+
+.empty-files-data {
+  @include flex-column;
+  align-items: center;
+  gap: 1rem;
+
+  & > i {
+    font-size: 6rem;
+    color: #e2e2e2;
+  }
+}
+
+.reports-list__empty-text,
+.media-plans-list__empty-text {
+  text-align: center;
+  color: #000000;
+  font-weight: 500;
+  font-size: $font-size-sm;
+  line-height: 145%;
+}
+
+.empty-files-data-text {
+  text-align: center;
+  color: #000000;
+  font-weight: 500;
+  font-size: $font-size-sm;
+  line-height: 145%;
+}

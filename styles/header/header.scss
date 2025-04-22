@@ -1,0 +1,120 @@
+/* ХЕАДЕР: */
+/* ---------------------------- */
+@use '../mixinsAndVariables.scss' as *;
+
+.app-header {
+  @include flex-column;
+  gap: 1rem;
+  padding: $container-elem-padding;
+  background-color: white;
+
+  &__row {
+    @include flex-column;
+    gap: 0.5rem;
+  }
+}
+
+/* ряд хеадера: */
+.header-row {
+  &__label {
+    font-size: 26px;
+    font-weight: 600;
+
+    &__left {
+      color: $main-pink-color;
+    }
+
+    &__right {
+      color: #000000;
+    }
+  }
+
+  &__user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* детализация данных пользователя (эл. почта и выручка): */
+.header-user-info__details {
+  @include flex-column;
+  gap: 0.2rem;
+
+  &__email {
+    font-weight: 600;
+    font-size: $font-size-sm;
+
+    &__label {
+      display: none;
+    }
+  }
+
+  &__revenue {
+    font-size: 12px;
+    font-weight: 500;
+    color: #797979;
+
+    &__label {
+      display: none;
+    }
+  }
+}
+
+/* опции пользователя (настройки, выход из системы): */
+.user-info-options {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &__more,
+  &__logout {
+    display: flex;
+    padding: 0.5rem;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+  }
+
+  &__more:hover,
+  &__logout:hover {
+    cursor: pointer;
+    background-color: #e2e2e2;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 200ms ease-in, box-shadow 200ms ease-in;
+  }
+}
+
+/* кнопки (медиапланы и отчеты): */
+.info-btn-grp {
+  display: flex;
+  gap: 0.5rem;
+
+  &__btn {
+    padding: 0.7rem;
+    background-color: #cbcbcb;
+    border: none;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    font-size: $font-size-sm;
+  }
+}
+
+.media-plans-btn:hover {
+  cursor: pointer;
+  color: whitesmoke;
+  background-color: $main-pink-color;
+  box-shadow: $elem-shadow-strong;
+  transition: background-color 200ms ease-in, color 200ms ease-in,
+    box-shadow 200ms ease-in;
+}
+
+.reports-btn:hover {
+  cursor: pointer;
+  color: whitesmoke;
+  background-color: #2676ee;
+  box-shadow: $elem-shadow-strong;
+  transition: background-color 200ms ease-in, color 200ms ease-in,
+    box-shadow 200ms ease-in;
+}

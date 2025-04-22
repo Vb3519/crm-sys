@@ -1,0 +1,125 @@
+@use '../mixinsAndVariables.scss' as *;
+
+/* ФУТЕР: */
+/* ---------------------------- */
+.app-footer {
+  @include flex-column;
+  gap: 1rem;
+  padding: $container-elem-padding;
+}
+
+.footer-row {
+  @include flex-column;
+  gap: 1rem;
+
+  &__label {
+    font-size: 26px;
+    font-weight: 600;
+    color: #c3c3c3;
+  }
+
+  &__privacy:hover {
+    color: $main-pink-color;
+    transition: color 200ms ease-in;
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 15px;
+    color: #525252;
+  }
+
+  &__lang > i {
+    color: #292d32;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* эл. почта: */
+  &__email {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    & > i {
+      color: #292d32;
+    }
+
+    &__text {
+      font-size: 15px;
+      color: #525252;
+    }
+
+    &__text:hover {
+      cursor: pointer;
+      color: $main-pink-color;
+      transition: color 200ms ease-in;
+    }
+  }
+
+  /* автор: */
+  &__author {
+    font-size: $font-size-sm;
+    color: #525252;
+    opacity: 0.5;
+  }
+}
+
+.footer-row > a {
+  color: #525252;
+  font-size: $font-size-sm;
+  cursor: pointer;
+}
+
+.footer-lang-list {
+  display: flex;
+  gap: 0.5rem;
+
+  &__elem:hover {
+    cursor: pointer;
+    color: $main-pink-color;
+    transition: color 200ms ease-in;
+  }
+}
+
+/* соц. сети: */
+.footer-row__socials {
+  &__elem {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: gray;
+  }
+
+  &__elem:hover {
+    cursor: pointer;
+    box-shadow: $elem-shadow-strong;
+    transition: box-shadow 200ms ease-in;
+  }
+
+  &__elem > i {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.socials-whatsapp > i {
+  padding-left: 1px;
+}
+
+.socials-telegram {
+  background-color: #229ed9;
+  color: whitesmoke;
+}
+
+.socials-whatsapp {
+  background-color: #20b038;
+  color: whitesmoke;
+}

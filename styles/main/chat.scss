@@ -1,0 +1,192 @@
+@use '../mixinsAndVariables.scss' as *;
+
+/* ЧАТ: */
+/* ---------------------------- */
+.app-chat {
+  @include flex-column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebebeb;
+
+  &__descrip-and-actions {
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    gap: 1rem;
+  }
+
+  &__messages {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    padding: $container-elem-padding;
+    height: 400px;
+    overflow-y: auto;
+  }
+
+  &__reports {
+    margin-left: auto;
+    padding: $container-elem-padding;
+    @include flex-column;
+    gap: 1rem;
+  }
+
+  &__body__wrapper {
+    padding: $container-elem-padding;
+    padding-bottom: 2rem;
+    width: 100%;
+  }
+}
+
+/* "заглушка" для чата (когда еще нет сообщений): */
+.chat-descrip-and-actions {
+  &__img-container > img {
+    width: 130px;
+  }
+
+  &__descrip-text {
+    text-align: center;
+    color: #000000;
+    font-weight: 500;
+    font-size: $font-size-sm;
+    line-height: 145%;
+  }
+}
+
+/* сообщения (пользователя и помощника) */
+.app-chat__messages {
+  &__message {
+    @include flex-column;
+    gap: 1rem;
+    width: 80%;
+    padding: $container-elem-padding;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+    font-size: 15px;
+  }
+}
+
+.my-msg {
+  gap: 0.5rem;
+  width: 80%;
+  margin-left: auto;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.assitant-msg__body {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &__photo {
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: #cbcbcb;
+  }
+
+  &__photo > i {
+    width: 15px;
+    padding-left: 1px;
+    color: whitesmoke;
+  }
+}
+
+.assitant-msg__from {
+  font-weight: 600;
+}
+
+/* группа кнопок (отчеты и медиапланы) в чате: */
+.chat-reports {
+  &__btn {
+    font-weight: 500;
+    font-size: $font-size-sm;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+  }
+
+  &__btn:hover {
+    cursor: pointer;
+    box-shadow: $elem-shadow-strong;
+    transition: box-shadow 200ms ease-in;
+  }
+}
+
+.get-reports-btn {
+  width: 80%;
+  margin-left: auto;
+  background-color: #2676ee;
+  color: #ffffff;
+}
+
+.get-media-plans-btn {
+  background-color: $main-pink-color;
+  color: #ffffff;
+}
+
+/* ТЕЛО ЧАТА: */
+/* ---------------------------- */
+.chat-body {
+  @include flex-column;
+  gap: 0.5rem;
+  width: 100%;
+  background-color: white;
+  border-radius: 1rem;
+  border: 2px solid #ebebeb;
+
+  &__text-area {
+    width: 100%;
+    min-height: 144px;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    padding: $container-elem-padding;
+    resize: none;
+  }
+}
+
+/* пользовательские действия в чате (добавление файлов, отправка сообщения): */
+.chat-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $container-elem-padding;
+
+  &__add {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+    color: #9f9f9f;
+    font-size: 22px;
+
+    &__file:hover,
+    &__img:hover {
+      cursor: pointer;
+      color: #b8b8b8;
+      transition: color 200ms ease-in;
+    }
+  }
+
+  &__send-msg {
+    display: flex;
+    padding: $container-elem-padding;
+    border-radius: 50%;
+    background-color: $main-pink-color;
+    color: whitesmoke;
+  }
+
+  &__send-msg:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 200ms ease-in;
+  }
+}
