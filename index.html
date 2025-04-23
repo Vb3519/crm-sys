@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pink Chiken App</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/proj-name/assets/index-BLght457.js"></script>
+    <link rel="stylesheet" crossorigin href="/proj-name/assets/index-C0PmfdTg.css">
+  </head>
+  <body>
+    <div class="app-page">
+      <!------------------------------------------------------------------------------------------------------->
+      <!----------------------------------------------- ХЕАДЕР: ----------------------------------------------->
+      <!------------------------------------------------------------------------------------------------------->
+      <header class="app-page__header app-header">
+        <div class="app-header__row header-row">
+          <div class="header-row__label">
+            <span class="header-row__label__left">Pink</span
+            ><span class="header-row__label__right">Chicken</span>
+          </div>
+          <div class="header-row__user-info header-user-info">
+            <div class="header-user-info__details">
+              <div class="header-user-info__details__email">
+                <div class="header-user-info__details__email__label">
+                  <i class="fa-regular fa-user"></i>
+                </div>
+                Username@adaurum.ru
+              </div>
+              <div class="header-user-info__details__revenue">
+                <div class="header-user-info__details__revenue__label">
+                  <i class="fa-solid fa-rotate"></i>
+                </div>
+                5% <span>выручки</span>
+              </div>
+            </div>
+            <div class="header-user-info__actions user-info-options">
+              <div class="user-info-options__more">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="user-info-options__logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- медиапланы и отчеты: -->
+        <div class="app-header__info-btn-grp info-btn-grp">
+          <button class="info-btn-grp__btn media-plans-btn">Медиапланы</button>
+          <button class="info-btn-grp__btn reports-btn">Отчеты</button>
+        </div>
+      </header>
+
+      <!------------------------------------------------------------------------------------------------------->
+      <!----------------------------------------------- МЕИН: ------------------------------------------------->
+      <!------------------------------------------------------------------------------------------------------->
+      <main class="app-page__main app-main">
+        <!-- файлы (медиапланы и отчеты): -->
+        <section class="app-main__all-files all-files">
+          <h2 class="all-files__title">Файлы</h2>
+          <!-- заглушка (при отсутствии медиапланов и отчетов) -->
+          <div class="all-files__cap files-cap">
+            <div class="files-cap__img-container">
+              <img src="/proj-name/assets/folder_img-DmUDssTR.svg" alt="folder" />
+            </div>
+            <p class="files-cap__description">
+              Закажи у личного помощника медиаплан. Он появится в этом разделе.
+            </p>
+          </div>
+          <!----------------------------------------------------->
+
+          <div
+            class="all-files__plans-and-reports-wrapper plans-and-reports-wrapper"
+          >
+            <!-- медиапланы: -->
+            <div class="all-files__media-plans media-plans-box">
+              <div class="media-plans-box__title">
+                <h3 class="media-plans-box__title__text">Медиапланы</h3>
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+
+              <ul class="media-plans-box__list media-plans-list">
+                <!-- список запрашиваемых медиапланов -->
+              </ul>
+            </div>
+
+            <!-- отчеты: -->
+            <div class="all-files__reports reports-box">
+              <div class="reports-box__title">
+                <h3 class="reports-box__title__text">Отчеты</h3>
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+              <ul class="reports-box__list reports-list">
+                <!-- список запрашиваемых отчетов -->
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="app-main__chat-assistant-wrapper chat-assistant-wrapper"
+        >
+          <!-- титул (Личный помощник): -->
+          <div class="app-main__assistant assistant-title">
+            <div class="assistant-title__info">
+              <h2 class="assistant-title__info__title-text">Личный помощник</h2>
+              <div class="assistant-title__info__assitant-name">
+                <p>Jim Davidson</p>
+                <span>JimDavidson@adaurum.ru</span>
+              </div>
+            </div>
+            <button class="assistant-title__badge">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+            <!-- меню обратной связи чата -->
+            <ul class="assistant-title__options">
+              <li class="assistant-title__options__elem">
+                <a src="#">Обратная связь о работе сервиса</a>
+              </li>
+              <li class="assistant-title__options__elem">
+                <a src="#">Сменить помощника</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- чат с администратором: -->
+          <div class="app-main__chat app-chat">
+            <!-- заглушка для чата: -->
+            <div class="app-chat__descrip-and-actions chat-descrip-and-actions">
+              <div class="chat-descrip-and-actions__img-container">
+                <img
+                  src="/proj-name/assets/admin_img-BcTEqUiX.svg"
+                  alt="изображение Вашего личного помощника"
+                />
+              </div>
+              <p class="chat-descrip-and-actions__descrip-text">
+                Это чат с администратором. Ты можешь с ним пообщаться по любому
+                вопросу о нашем сервисе и узнать о ходе работы
+              </p>
+            </div>
+
+            <div class="app-chat__messages"></div>
+
+            <div class="app-chat__reports chat-reports">
+              <button class="chat-reports__btn get-reports-btn">
+                Заказать отчет
+              </button>
+              <button class="chat-reports__btn get-media-plans-btn">
+                Заказать медиаплан
+              </button>
+            </div>
+
+            <!-- окошко отправки сообщений: -->
+            <div class="app-chat__body__wrapper">
+              <div class="app-chat__body chat-body">
+                <textarea class="chat-body__text-area"></textarea>
+                <div class="chat-body__actions chat-actions">
+                  <div class="chat-actions__add">
+                    <i
+                      class="fa-solid fa-folder-plus chat-actions__add__file"
+                    ></i>
+                    <i class="fa-regular fa-image chat-actions__add__img"></i>
+                  </div>
+                  <div class="chat-actions__send-msg">
+                    <i class="fa-regular fa-paper-plane"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-------------------------------------------------------------------------------------------------------->
+      <!----------------------------------------------- ФУТЕР: ------------------------------------------------->
+      <!-------------------------------------------------------------------------------------------------------->
+      <footer class="app-page__footer app-footer">
+        <div class="app-footer__row footer-row">
+          <div class="footer-row__label">PinkChicken</div>
+          <a class="footer-row__privacy" src="#">Политика конфиденциальности</a>
+        </div>
+
+        <div class="app-footer__row footer-row">
+          <div class="footer-row__lang">
+            <i class="fa-solid fa-globe"></i>
+            <ul class="footer-row__lang__list footer-lang-list">
+              <li class="footer-lang-list__elem">RU</li>
+              <li class="footer-lang-list__elem">EN</li>
+              <li class="footer-lang-list__elem">TUR</li>
+            </ul>
+          </div>
+          <div class="footer-row__email">
+            <i
+              class="fa-solid fa-envelope-circle-check footer-row__email__label"
+            ></i>
+            <p class="footer-row__email__text">pinkchicken@adaurum.ru</p>
+          </div>
+          <ul class="footer-row__socials">
+            <li class="footer-row__socials__elem socials-telegram">
+              <i class="fa-regular fa-paper-plane"></i>
+            </li>
+            <li class="footer-row__socials__elem socials-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </li>
+          </ul>
+          <span class="footer-row__author">2025 by Viktor Bordyugov</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
