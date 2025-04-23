@@ -60,19 +60,29 @@ class AppController {
     document.addEventListener('scroll', () => {
       this.view.handleStickyNavMenuOnScroll();
     });
+
+    document.addEventListener('click', () => {
+      // тут логика удаления сообщений
+    });
   }
 
   // Добавление сообщения пользователя в чат:
   handleSendUserMsg() {
-    const message: string = this.view.chatTextArea.value;
+    const message: string = this.view.chatTextArea.value.trim();
 
     if (message.length > 0) {
+      this.model.addMsgData(message);
       this.view.addUserMsgToChat(message);
       this.view.chatTextArea.value = '';
+
+      console.log(this.model);
     } else {
       alert('Пожалуйста введите Ваше сообщение!');
+      this.view.chatTextArea.value = '';
     }
   }
+
+  // Удаление сообщения из чата:
 
   // Toggle-функции списков медиапланов или ответов (когда загружены данные):
   handleMediaplansListToggle() {
@@ -115,6 +125,7 @@ class AppController {
     this.view.addAssistantMsgToChat(
       'Выполняется Ваш запрос данных по медиапланам'
     );
+    this.model.addMsgData('Выполняется Ваш запрос данных по медиапланам');
 
     // имитация загрузки данных:
     try {
@@ -131,6 +142,7 @@ class AppController {
 
     this.model.setIsMediaplansDataLoaded(true);
     this.view.addAssistantMsgToChat('Данные по медиапланам загружены');
+    this.model.addMsgData('Данные по медиапланам загружены');
 
     this.fileListRenderPrep(this.view.mediaplansList);
 
@@ -174,7 +186,8 @@ class AppController {
     }
 
     this.view.getReportsBtn.disabled = true;
-    this.view.addAssistantMsgToChat('Запрос данных по отчетам');
+    this.view.addAssistantMsgToChat('Выполняется Ваш запрос данных по отчетам');
+    this.model.addMsgData('Выполняется Ваш запрос данных по отчетам');
 
     try {
       await new Promise((resolve) => {
@@ -190,6 +203,7 @@ class AppController {
 
     this.model.setIsReportsDataLoaded(true);
     this.view.addAssistantMsgToChat('Данные по отчетам загружены');
+    this.model.addMsgData('Данные по отчетам загружены');
 
     this.fileListRenderPrep(this.view.reportsList);
 

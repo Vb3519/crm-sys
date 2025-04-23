@@ -47,6 +47,11 @@ class AppModel {
   addDataToMediaplansList(companyInfo: MediaplansData_Type) {
     this.mediaplansList.push(companyInfo);
   }
+
+  // добавление данных об отправленных сообщениях:
+  addMsgData(msgText: string) {
+    this.chatMessages.push(msgText);
+  }
 }
 
 export default AppModel;
